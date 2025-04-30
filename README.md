@@ -1,4 +1,4 @@
-## Réalisé par : Doha Oauhmane /Mariem Atif / Salma Ouarar / Halima Moustine
+
 ---
 ## 📌 Description
 
