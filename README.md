@@ -1,3 +1,5 @@
+## Réalisé par Doha OUahmane / Mariem Atif / Salma Ouarar / Halima Moustine 
+
 
 ---
 ## 📌 Description
@@ -17,3 +19,8 @@ Cette application web permet aux utilisateurs de :
 - **Base de données** : MySQL
 - **API REST** : Communication entre React et Spring via JSON
 - **Sécurité** : Spring Security + JWT
+---
+
+## Demo
+
+---
