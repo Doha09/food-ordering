@@ -21,6 +21,9 @@ Cette application web permet aux utilisateurs de :
 - **Sécurité** : Spring Security + JWT
 ---
 
-## Demo
-<!-- Failed to upload "WhatsApp Video 2025-05-01 at 21.58.39.mp4" -->
+
+### 🎬 Démo Vidéo
+
+📁 [Voir la vidéo](videos/WhatsApp%20Video%202025-05-01%20at%2021.58.39.mp4)
+
 ---
