@@ -24,6 +24,6 @@ Cette application web permet aux utilisateurs de :
 
 ### 🎬 Démo Vidéo
 
-📁 [Voir la vidéo](<!-- Failed to upload "WhatsApp Video 2025-05-01 at 21.58.39.mp4" -->)
+<!-- Failed to upload "Vidéo demo.mp4" -->
 
 ---
