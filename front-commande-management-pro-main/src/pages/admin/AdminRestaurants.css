@@ -1,0 +1,444 @@
+.admin-restaurants {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.add-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #c0392b;
+}
+
+.restaurants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.restaurant-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.restaurant-info {
+  padding: 1.5rem;
+}
+
+.restaurant-info h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.restaurant-info p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+}
+
+.address i {
+  color: #e74c3c;
+}
+
+.restaurant-actions {
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.edit-button, .delete-button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.edit-button {
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.submit-button,
+.cancel-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.submit-button:hover {
+  background-color: #c0392b;
+}
+
+.cancel-button {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+}
+
+.cancel-button:hover {
+  background-color: #7f8c8d;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #e74c3c;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .admin-restaurants {
+    padding: 1rem;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .restaurants-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+.small-modal {
+  max-width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.small-modal h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.small-modal p {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+}
+
+.small-modal .modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.small-modal .delete-button,
+.small-modal .cancel-button {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+.edit-modal {
+  max-width: 500px;
+  padding: 25px;
+}
+
+.edit-modal h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.edit-modal .form-group {
+  margin-bottom: 20px;
+}
+
+.edit-modal .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.edit-modal .form-group input,
+.edit-modal .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.edit-modal .form-group input:focus,
+.edit-modal .form-group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.edit-modal .form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.edit-modal .modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.edit-modal .submit-button,
+.edit-modal .cancel-button {
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.edit-modal .submit-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+}
+
+.edit-modal .submit-button:hover {
+  background-color: #2980b9;
+}
+
+.edit-modal .cancel-button {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+}
+
+.edit-modal .cancel-button:hover {
+  background-color: #7f8c8d;
+}
+
+.add-modal {
+  max-width: 500px;
+  padding: 25px;
+}
+
+.add-modal h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-modal .form-group {
+  margin-bottom: 20px;
+}
+
+.add-modal .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.add-modal .form-group input,
+.add-modal .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.add-modal .form-group input:focus,
+.add-modal .form-group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.add-modal .form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.add-modal .modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.add-modal .submit-button,
+.add-modal .cancel-button {
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.add-modal .submit-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+}
+
+.add-modal .submit-button:hover {
+  background-color: #c0392b;
+}
+
+.add-modal .cancel-button {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+}
+
+.add-modal .cancel-button:hover {
+  background-color: #7f8c8d;
+} 

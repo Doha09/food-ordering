@@ -1,0 +1,292 @@
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo i {
+  margin-right: 10px;
+  color: #e74c3c;
+}
+
+.main-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item.active {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 16px;
+}
+
+.nav-item.active i {
+  color: white;
+  margin-right: 8px;
+}
+
+.nav-item:not(.active) {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+}
+
+.nav-item:not(.active) i {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.nav-item:not(.active):hover {
+  background-color: #f5f5f5;
+  color: #e74c3c;
+}
+
+.nav-item:not(.active):hover i {
+  color: #e74c3c;
+}
+
+.nav-item:not(.active) span {
+  display: none;
+}
+
+.nav-item:not(.active):hover::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.user-dropdown {
+  position: relative;
+}
+
+.user-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.user-dropdown-toggle:hover {
+  background-color: #f5f5f5;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.user-avatar.large {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.user-role {
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.user-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  min-width: 250px;
+  margin-top: 8px;
+  animation: fadeIn 0.2s ease;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-email {
+  font-size: 14px;
+  color: #666;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 12px 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+  color: #e74c3c;
+}
+
+.dropdown-item.logout {
+  color: #e74c3c;
+}
+
+.dropdown-item.logout:hover {
+  background-color: #fde8e8;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-button,
+.register-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login-button {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+.login-button:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.register-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.register-button:hover {
+  background-color: #c0392b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+
+  .main-nav {
+    gap: 5px;
+  }
+
+  .nav-item {
+    padding: 6px;
+  }
+
+  .nav-item.active {
+    padding: 6px 12px;
+  }
+
+  .nav-item:not(.active) {
+    width: 36px;
+    height: 36px;
+  }
+
+  .user-name {
+    display: none;
+  }
+
+  .user-dropdown-menu {
+    right: -15px;
+  }
+
+  .auth-buttons {
+    gap: 5px;
+  }
+
+  .login-button,
+  .register-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+} 
