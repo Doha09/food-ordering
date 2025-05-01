@@ -27,3 +27,8 @@ Cette application web permet aux utilisateurs de :
 https://github.com/user-attachments/assets/a8ee1d53-fec2-40ba-8bb9-1454629745ea
 
 ---
+### 🎬 Démo Vidéo
+
+https://github.com/user-attachments/assets/84f58e4f-261a-4c7e-8aac-9937d63edff9
+
+---
